@@ -9,6 +9,12 @@ const doc = {
     description: "CircleApp API Documentation",
   },
   host: "localhost:3000",
+  servers: [
+    {
+        url: "https://cirlce-app-be5.vercel.app/",
+    },
+    
+  ],
   components: {
     securitySchemes: {
       bearerAuth: {
@@ -108,7 +114,7 @@ const doc = {
 };
 
 const outputFile = "./swagger-output.json";
-const routes = ["./src/index.ts"];
+const routes = ["./index.ts"];
 
 /* NOTE: If you are using the express Router, you must pass in the 'routes' only the 
 root file where the route starts, such as index.js, app.js, routes.js, etc ... */
